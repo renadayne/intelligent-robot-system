@@ -65,7 +65,7 @@ class Filter:
 
         self.P = self.P - K*self.P
 
-        self.estimate = np.append(self.estimate, [[self.px , self.py, self.theta]], axis=0)
+        self.estimate = np.append(self.estimate, [[float(pos_est[0]), float(pos_est[1]), float(pos_est[2])]], axis=0)
 
         self.measurement_tracker = np.append(self.measurement_tracker, [[self.px + random.randint(-1, 1)/80, self.py + random.randint(-1, 1)/80, self.theta + random.randint(-1, 1)/200]], axis=0)
 
